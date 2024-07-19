@@ -4,9 +4,13 @@ FROM openjdk:17-jdk-alpine
 # 作業ディレクトリを設定
 WORKDIR /app
 
-# Mavenを使ってプロジェクトをビルド
-COPY . /app
-RUN ./mvnw package
+# Mavenをインストールするための依存関係を追加
+COPY .mvn .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:resolve
+
+# プロジェクトのソースコードをコピー
+COPY src ./src
 
 # アプリケーションを実行するコマンド
-CMD ["java", "-jar", "target/backend-0.0.1-SNAPSHOT.jar"]
+CMD ["./mvnw", "spring-boot:run"]
