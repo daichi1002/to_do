@@ -51,3 +51,14 @@ npm run dev
 ```
 http://localhost:3000/
 ```
+
+### データベース
+8. 以下のコマンドを使用して、Userテーブルにデータを投入する
+```
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name": "John Doe"}'
+```
+
+9. 以下のコマンドを使用して、8で投入したデータが取得できることを確認
+```
+curl http://localhost:8080/users
+```
