@@ -12,6 +12,10 @@ COPY mvnw pom.xml ./
 RUN apk update && apk add dos2unix
 RUN dos2unix ./mvnw
 
+
+# Converting the mvnw line endings during build
+RUN apk update && apk add dos2unix
+RUN dos2unix ./mvnw
 RUN ./mvnw dependency:resolve
 
 # プロジェクトのソースコードをコピー
