@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ひなたぼっこ",
-  description: "ひなたぼっこ",
+  description:
+    "宮崎大淀川ゴルフ場施設内に2024年6月1日にリニューアルオープンした定食屋です。",
 };
 
 export default function RootLayout({
