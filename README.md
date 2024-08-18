@@ -19,46 +19,59 @@
 ## 開発環境構築
 
 ### 共通
-1. Dockerのインストール（https://www.docker.com/ja-jp/）
+
+1. Docker のインストール（https://www.docker.com/ja-jp/）
 2. リポジトリのクローン
+
 ```
 git clone git@github.com:daichi1002/to_do.git
 ```
 
 ### backend
+
 3. コンテナ起動
+
 ```
 docker-compose up
 ```
-4. 以下のコマンドをターミナルで実行してAPIサーバーから応答があれば完了
+
+4. 以下のコマンドをターミナルで実行して API サーバーから応答があれば完了
+
 ```
 curl http://localhost:8080/hello
 ```
 
 ### frontend
-5. nodeのインストール
+
+5. node のインストール
+
 ```
 https://nodejs.org/en/download/package-manager
 ```
 
-6. frontendのディレクトリに移動し、npmコマンドを実行する
+6. frontend のディレクトリに移動し、npm コマンドを実行する
+
 ```
 cd frontend
 npm run dev
 ```
 
 7. 以下のリンクを開き、Hello,World!が表示されいることを確認
+
 ```
 http://localhost:3000/
 ```
 
 ### データベース
-8. 以下のコマンドを使用して、Userテーブルにデータを投入する
+
+8. 以下のコマンドを使用して、User テーブルにデータを投入する
+
 ```
 curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"name": "John Doe"}'
 ```
 
-9. 以下のコマンドを使用して、8で投入したデータが取得できることを確認
+9. 以下のコマンドを使用して、8 で投入したデータが取得できることを確認
+
 ```
 curl http://localhost:8080/users
 ```
