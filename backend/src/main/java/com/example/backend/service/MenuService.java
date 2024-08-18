@@ -16,16 +16,4 @@ public class MenuService {
     public List<Menu> getAllMenus() {
         return menuRepository.findAll();
     }
-
-    public Menu getMenuById(Long id) {
-        return menuRepository.findById(id).orElse(null);
-    }
-
-    public Menu saveMenu(Menu menu) {
-        return menuRepository.save(menu);
-    }
-
-    public void deleteMenu(Long id) {
-        menuRepository.deleteById(id);
-    }
 }

@@ -18,25 +18,4 @@ public class MenuController {
     public List<Menu> getAllMenus() {
         return menuService.getAllMenus();
     }
-
-    @GetMapping("/{id}")
-    public Menu getMenuById(@PathVariable Long id) {
-        return menuService.getMenuById(id);
-    }
-
-    @PostMapping
-    public Menu createMenu(@RequestBody Menu menu) {
-        return menuService.saveMenu(menu);
-    }
-
-    @PutMapping("/{id}")
-    public Menu updateMenu(@PathVariable Long id, @RequestBody Menu menu) {
-        menu.setId(id);
-        return menuService.saveMenu(menu);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteMenu(@PathVariable Long id) {
-        menuService.deleteMenu(id);
-    }
 }

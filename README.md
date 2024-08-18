@@ -38,7 +38,7 @@ docker-compose up
 4. 以下のコマンドをターミナルで実行して API サーバーから応答があれば完了
 
 ```
-curl http://localhost:8080/api/menu-items
+curl http://localhost:8080/hello
 ```
 
 ### frontend
