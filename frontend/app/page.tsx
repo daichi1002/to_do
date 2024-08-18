@@ -35,7 +35,7 @@ export default function Component() {
         <div className="container mx-auto flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">ひなたぼっこ</h1>
-            <p className="text-sm">宮崎の老舗定食屋</p>
+            <p className="text-sm">宮崎にあるゴルフ場併設の定食屋</p>
           </div>
           <nav className="hidden md:flex items-center gap-4">
             <Link href={`/menu`} className="hover:underline" prefetch={false}>
@@ -53,8 +53,7 @@ export default function Component() {
           <div>
             <h2 className="text-3xl font-bold mb-4">About us</h2>
             <p className="text-muted-foreground mb-6">
-              宮崎大淀川ゴルフ場施設内に2024年6月1日に
-              リニューアルオープンした定食屋です。
+              宮崎大淀川ゴルフ場施設内に2024年6月1日にリニューアルオープンした定食屋です。
               <br />
               全て手づくりで丹精を込めて作られた料理はどこかあたたかく、
               優しい味わいを感じられます。
