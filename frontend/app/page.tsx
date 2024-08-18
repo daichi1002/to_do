@@ -35,7 +35,7 @@ export default function Component() {
         <div className="container mx-auto flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">ひなたぼっこ</h1>
-            <p className="text-sm">Authentic Italian Cuisine</p>
+            <p className="text-sm">宮崎の老舗定食屋</p>
           </div>
           <nav className="hidden md:flex items-center gap-4">
             <Link href={`/menu`} className="hover:underline" prefetch={false}>
