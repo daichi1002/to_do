@@ -38,9 +38,6 @@ export default function Component() {
             <p className="text-sm">Authentic Italian Cuisine</p>
           </div>
           <nav className="hidden md:flex items-center gap-4">
-            <Link href="/" className="hover:underline" prefetch={false}>
-              Home
-            </Link>
             <Link href={`/menu`} className="hover:underline" prefetch={false}>
               Menu
             </Link>
@@ -56,10 +53,14 @@ export default function Component() {
           <div>
             <h2 className="text-3xl font-bold mb-4">About us</h2>
             <p className="text-muted-foreground mb-6">
-              Acme Bistro is a family-owned Italian restaurant that has been
-              serving the community for over 20 years. We pride ourselves on
-              using only the freshest, locally-sourced ingredients to create
-              authentic and delicious Italian dishes.
+              宮崎大淀川ゴルフ場施設内に2024年6月1日に
+              リニューアルオープンした定食屋です。
+              <br />
+              全て手づくりで丹精を込めて作られた料理はどこかあたたかく、
+              優しい味わいを感じられます。
+              <br />
+              衛生面にも気を遣っていて、ゴルフプレイヤーやそれ以外の
+              方でも気軽に立ち寄れる定食屋となっています。
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div>
