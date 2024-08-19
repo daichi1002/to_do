@@ -4,13 +4,13 @@
  * @see https://v0.dev/t/bRnSzpEfGeb
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Utensils } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
@@ -31,19 +31,20 @@ export default function Component() {
     <div className="flex flex-col min-h-dvh">
       <header className="bg-primary text-primary-foreground py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <div>
+          <Link href={`/`}>
             <h1 className="text-2xl font-bold">ひなたぼっこ</h1>
             <p className="text-sm">宮崎にあるゴルフ場併設の定食屋</p>
-          </div>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link href={`/menu`} className="hover:underline" prefetch={false}>
-              Menu
+          </Link>
+          <nav className="md:flex items-center gap-4">
+            <Link
+              href={`/menu`}
+              className="hover:underline flex items-center space-x-1"
+              prefetch={false}
+            >
+              <Utensils className="w-5 h-5" />
+              <span className="text-base">Menu</span>
             </Link>
           </nav>
-          <Button variant="outline" size="sm" className="md:hidden">
-            <MenuIcon className="h-5 w-5" />
-            <span className="sr-only">Toggle Menu</span>
-          </Button>
         </div>
       </header>
       <main className="flex-1 py-12 md:py-16">

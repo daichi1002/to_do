@@ -3,7 +3,7 @@
  * @see https://v0.dev/t/M8vy38oaPWX
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import { Button } from "@/components/ui/button";
+import { Utensils } from "lucide-react";
 import Link from "next/link";
 
 export default function Component() {
@@ -11,22 +11,20 @@ export default function Component() {
     <div className="bg-background text-foreground">
       <header className="bg-primary text-primary-foreground py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <div>
+          <Link href={`/`}>
             <h1 className="text-2xl font-bold">ひなたぼっこ</h1>
-            <p className="text-sm">Authentic Italian Cuisine</p>
-          </div>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link href="/" className="hover:underline" prefetch={false}>
-              Home
-            </Link>
-            <Link href={`/menu`} className="hover:underline" prefetch={false}>
-              Menu
+            <p className="text-sm">宮崎にあるゴルフ場併設の定食屋</p>
+          </Link>
+          <nav className="md:flex items-center gap-4">
+            <Link
+              href={`/menu`}
+              className="hover:underline flex items-center space-x-1"
+              prefetch={false}
+            >
+              <Utensils className="w-5 h-5" />
+              <span className="text-base">Menu</span>
             </Link>
           </nav>
-          <Button variant="outline" size="sm" className="md:hidden">
-            <MenuIcon className="h-5 w-5" />
-            <span className="sr-only">Toggle Menu</span>
-          </Button>
         </div>
       </header>
       <main className="container mx-auto py-12 px-4 md:px-6">
