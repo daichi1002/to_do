@@ -31,7 +31,7 @@ export default function Component() {
     <div className="flex flex-col min-h-dvh">
       <header className="bg-primary text-primary-foreground py-4 px-6">
         <div className="container mx-auto flex items-center justify-between">
-          <Link href={`/`}>
+          <Link href={`/`} className="md:mr-8">
             <h1 className="text-2xl font-bold">ひなたぼっこ</h1>
             <p className="text-sm">宮崎にあるゴルフ場併設の定食屋</p>
           </Link>
